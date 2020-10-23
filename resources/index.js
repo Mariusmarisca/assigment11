@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event){
-    const menuItems= document.getElementsByClassName("menu-item");
+    const menuItems = document.getElementsByClassName("menu-item");
+    const menuShop = document.getElementById('menuShop');
     console.log('menuItems', menuItems)
 
     for(let i = 0; i < menuItems.length; i++){
@@ -27,6 +28,14 @@ document.addEventListener("DOMContentLoaded", function(event){
               }
               document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
               
+              //o idee de cum poti sa ascunzi un element conditional
+              if(dataContent === 'orders-container') {
+                  //menuShop e selectat mai sus oe randul 3
+                  menuShop.classList.add('hidden');
+              } else {
+                menuShop.classList.remove('hidden');
+              }
+
               const dataLogo=menuItem.dataset.logo;
               console.log('dataLogo', dataLogo)
               const logoElements=document.getElementsByClassName("logo");
