@@ -1,3 +1,5 @@
+// te rog sa inlocuiesti cu ready function aici de la jQuery 
+//si trebuie sa faci un pic de curatenie, iti estea prea aglomerat codul si 80% din tot ce ai nevoie aici nu iti mai trebuie, este foarte greu sa iti dai seama ce e ok si ce nu e ok aici
 document.addEventListener("DOMContentLoaded", function(event){
     const menuItems = $('.main-menu').find('a');
     const menuShop = $('.menuShop');
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event){
             
 
        //la ambele variante nu iese selectia de data-content cum trebuie
+    //    $('main-menu') tie nu iti selecteaza nimic aici, nu este nici clasa, nici id, doar text
        const dataContent=$('main-menu').attr('data-content');
        console.log($('main-menu').attr('data-content'));
        //si nici asa varianta ce am comentat-o mai jos nu iese
