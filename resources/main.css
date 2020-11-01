@@ -38,7 +38,6 @@ aside {width:25%;
             flex-direction: column;
             }
 .main-menu a {text-decoration: none;
-       color:green;
        margin:5px 0;
        cursor: pointer;
        }
