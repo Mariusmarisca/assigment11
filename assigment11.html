@@ -21,28 +21,26 @@
                         </div>
                         <div class="main-wrapper">
                             <div class="logos">
-                                <!-- cred ca te-ar fi ajutat mai mult sa denumesti specific wrapper-ele. daca vine cineva dupa tine va fi greu sa preia logica. -->
-                            <div class="logo logo-wrapper1"></div>
-                            <div class="logo logo-wrapper2 hidden"></div>
-                            <div class="logo logo-wrapper3 hidden"></div>
-                            <div class="logo logo-wrapper4 hidden"></div>
-                            <div class="logo logo-wrapper5 hidden"></div>
-                        </div>  
+                               <div class="logo logo-wrapperVIP"></div>
+                               <div class="logo logo-wrapperGOLD hidden"></div>
+                               <div class="logo logo-wrapperELITE hidden"></div>
+                               <div class="logo logo-wrapperMEMBER hidden"></div>
+                               <div class="logo logo-wrapper5 hidden"></div>
+                            </div>  
                         <div class="main-menu"> 
-                           <a class="menu-item selected" data-content="orders-container" data-logo="logo-wrapper1" id="buttonOrder"><strong>Your Orders</strong></a>
-                           <a class="menu-item" data-content="status-container" data-logo="logo-wrapper2"><strong>Reward Status</strong></a>
-                           <a class="menu-item" data-content="account-container" data-logo="logo-wrapper3"><strong>Account Settings</strong></a>
-                           <a class="menu-item" data-content="payment-container" data-logo="logo-wrapper4"><strong>Payment Methods</strong></a>
+                           <a class="menu-item selected" data-content="orders-container" data-logo="logo-wrapperVIP" id="buttonOrder"><strong>Your Orders</strong></a>
+                           <a class="menu-item" data-content="status-container" data-logo="logo-wrapperGOLD"><strong>Reward Status</strong></a>
+                           <a class="menu-item" data-content="account-container" data-logo="logo-wrapperELITE"><strong>Account Settings</strong></a>
+                           <a class="menu-item" data-content="payment-container" data-logo="logo-wrapperMEMBER"><strong>Payment Methods</strong></a>
                            <a class="menu-item" data-content="exit-container"><strong>Sign Out</strong></a>
                         </div>
                     </aside>
                     <div class="main-pages">
                             <nav class="menuShop">
-                                <!-- semantic astea ar trebui sa fie link-uri chiar daca noi nu am implementat functionalitatea. De obicei din layout ar trebui sa reusiti sa interpretati tipul de elemente de folosit -->
-                                <p>SHOP</p>
-                                <div class="shop-sign1"></div>
-                                <div class="shop-sign2"></div>
-                                <div class="shop-sign3"></div>
+                                <a><p>SHOP</p></a>
+                                <a><div class="shop-sign1"></div></a>
+                                <a><div class="shop-sign2"></div></a>
+                                <a><div class="shop-sign3"></div></a>
                             </nav>
                             <section>
                             <div class="content orders-container">
@@ -62,25 +60,23 @@
                                                </div>
                                          </div>
                                          <p>Order #</p>
-                                         <!-- de ce asta? :) -->
-                                         <p style="font-size: 20px;"><strong>30004</strong></p>
+                                         <p><strong>30004</strong></p>
                                          <p>Order Total</p>
-                                         <p style="font-size: 20px;"><strong>$324.96</strong></p>
+                                         <p><strong>$324.96</strong></p>
                                          <p>Also in this order</p>
                                      </div>
                                     <div class="products-wrapper">
-                                          <div class="object1">
-                                              <img src="assets/product-1/addition-1.png">
-                                          </div>
-                                          <div class="object2">
-                                              <img src="assets/product-1/addition-3.png">
-                                           </div>
-                                          <div class="object3">
-                                              <img src="assets/product-1/addition-4.png">
-                                          </div>
-                                          <div class="object4">
+                                          <div data-img="addition-1.png" class="gallery-item object1"></div>
+                                          <div data-img="addition-3.png" class="gallery-item object2"></div>
+                                          <div data-img="addition-4.png" class="gallery-item object3"></div>
+                                          <div class="gallery-item object4">
                                                <p>+3<br>more</p>   
                                           </div>
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="overlay-content-wrapper">
+                                            <div class="img-wrapper"></div>
+                                        </div>
                                     </div>
                                </div>
                              </div>
@@ -217,8 +213,6 @@
             </div>
         </div>
         </div>
-        <!-- am comentat aici ca sa ma pot concentra doar pe inner pages, poti sa pastrezi care fisier doresti tu, dar insist pe a sterge ceea ce nu e necesar -->
          <script src="resources/index.js"></script> 
-        <!--<script src="resources/main-clean.js"></script>
     </body>
 </html>

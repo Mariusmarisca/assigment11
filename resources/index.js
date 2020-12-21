@@ -1,16 +1,13 @@
-// te rog sa inlocuiesti cu ready function aici de la jQuery 
-//si trebuie sa faci un pic de curatenie, iti estea prea aglomerat codul si 80% din tot ce ai nevoie aici nu iti mai trebuie, este foarte greu sa iti dai seama ce e ok si ce nu e ok aici
 $(function(){
-    const menuItem=$('.main-menu').find('a');
-    console.log('menuItem:', menuItem);
+    const menuItem=$('.main-menu').find('a');;
     const dataContent=$('.content');
     const logoItems=$('.logo');
     const ordersContainer=$('.orders-container');
     const buttonOrder=$('#buttonOrder');
-    console.log('buttonOrder:', buttonOrder);
     const menuShop=$('.menuShop');
-    console.log('menuShop', menuShop);
-    
+    const galleryItem=$('.gallery-item');
+    const overlayItem=$('.overlay');
+    const imgWrapper=$('.img-wrapper');
 
     menuItem.click(function(e) {
         e.preventDefault();
@@ -31,16 +28,16 @@ $(function(){
 
          dataContent.each(function(index,item){
              if($(item).hasClass(contentElements)){
-                 $(item).removeClass('hidden');
-                 menuShop.removeClass('hidden');
+                $(item).removeClass('hidden');
+                menuShop.removeClass('hidden');
              }
         })
-    }
-    )
-        
-           buttonOrder.click(function(e){
-               e.preventDefault();
-               menuShop.addClass('hidden');
+    });
+
+    
+        buttonOrder.click(function(e){
+            e.preventDefault();
+            menuShop.addClass('hidden');
            })
 
         const orderLink=$('#order-link');
@@ -52,8 +49,17 @@ $(function(){
             dataContent.addClass('hidden');
             linkPage.removeClass('hidden');
             menuShop.removeClass('hidden')
-        }
-        )
+        })
 
-}
-)
+        galleryItem.click(function() {
+            imgWrapper.css({backgroundImage:"url(assets/product-1/" + $(this).data('img') + ")"});
+            overlayItem.fadeIn();  
+        })
+        imgWrapper.click(function(){
+            e.stopPropagation();
+        })
+        overlayItem.click(function(){
+            $(this).fadeOut();
+        })
+
+})
